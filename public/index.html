@@ -2,38 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="http://localhost:3000/app.css">
+    <link rel="stylesheet" href="http://localhost:3003/styles.css">
+    <link rel="stylesheet" href="http://localhost:3001/styles.css">
+    <link rel="stylesheet" href="http://localhost:3002/app.css">
     <title>FEC Demo</title>
   </head>
   <body>
-    <div id="Info"></div>
-    <div id="CountDown"></div>
-    <div id="Related"></div>
-    <div id="Reviews"></div>
+    <div id="hero"></div>
+    <div id="reservation"></div>
+    <div id="app"></div>
+    <div id="reviews"></div>
     <script src="/lib/react.development.js"></script>
     <script src="/lib/react-dom.development.js"></script>
+    <script src="http://localhost:3000/bundle.js"></script>
+    <script src="http://localhost:3003/bundle.js"></script>
     <script src="http://localhost:3001/app.js"></script>
     <script src="http://localhost:3002/app.js"></script>
-    <script src="http://localhost:3003/app.js"></script>
-    <script src="http://localhost:3004/app.js"></script>
+
     <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
     <script>
       ReactDOM.render(
-        React.createElement(Info),
-        document.getElementById('Info')
+        React.createElement(Hero),
+        document.getElementById('hero')
       );
+
       ReactDOM.render(
-        React.createElement(CountDown),
-        document.getElementById('CountDown')
+        React.createElement(ReservationBox),
+        document.getElementById('reservation')
       );
+
       ReactDOM.render(
-        React.createElement(Related),
-        document.getElementById('Related')
+        React.createElement(App),
+        document.getElementById('app')
       );
+
       ReactDOM.render(
-        React.createElement(Reviews),
-        document.getElementById('Reviews')
+        React.createElement(App),
+        document.getElementById('reviews')
       );
+    
     </script>
   </body>
 </html>
